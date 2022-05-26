@@ -11,7 +11,8 @@
     font-family: 'Roboto', sans-serif;
     background-color: #444444;
     color: #fff;
-    font-size: 12px
+    font-size: 12px;
+    margin: 0;
 }
 .contact-navs{
     display: flex;

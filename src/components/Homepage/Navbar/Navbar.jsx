@@ -3,6 +3,9 @@ import IconButton from "@material-ui/core/IconButton";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import DehazeIcon from '@material-ui/icons/Dehaze';
+import LineWeightIcon from '@material-ui/icons/LineWeight';
+
+
 import "./Navbar.css";
 
 const options = [
@@ -36,15 +39,17 @@ const Navbar = () => {
     setAnchorEl(null);
   };
   return (
-    <div className="main-nav">
-      <div>
+    <div>
+      <div className="main-nav">
+      <div className="category-btn">
         <IconButton
           aria-label="more"
           aria-controls="long-menu"
           aria-haspopup="true"
           onClick={handleClick}
+          className="icon-button"
         >
-          <DehazeIcon /> Categories
+          <DehazeIcon className="icon-style"/> Categories
         </IconButton>
         <Menu
           id="long-menu"
@@ -70,16 +75,28 @@ const Navbar = () => {
           ))}
         </Menu>
       </div>
-      <div>
-        <ul className="nav-menus">
-          <li>HOME</li>
-          <li>ABOUT US</li>
-          <li>ALL CATEGORIES</li>
-          <li>BLOG</li>
-          <li>PAGES</li>
-          <li>CONTACT US</li>
+      <div className=" topnav" id="myTopnav">
+        <ul className="nav-menus menu-btns">
+          <li className="nav-style">HOME</li>
+          <li className="nav-style">ABOUT US</li>
+          <li className="nav-style">ALL CATEGORIES</li>
+          <li className="nav-style">BLOG</li>
+          <li className="nav-style">PAGES</li>
+          <li className="nav-style">CONTACT US</li>
         </ul>
+        <div className="mobile-menu-btn"><LineWeightIcon /></div>
+        
       </div>
+      
+    </div>
+    <ul className="">
+          <li className="">HOME</li>
+          <li className="">ABOUT US</li>
+          <li className="">ALL CATEGORIES</li>
+          <li className="">BLOG</li>
+          <li className="">PAGES</li>
+          <li className="">CONTACT US</li>
+        </ul>
     </div>
   );
 };

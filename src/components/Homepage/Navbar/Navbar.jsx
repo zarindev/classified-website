@@ -89,7 +89,7 @@ const Navbar = () => {
       </div>
       
     </div>
-    <ul className="">
+    <ul className=" side-nav ">
           <li className="">HOME</li>
           <li className="">ABOUT US</li>
           <li className="">ALL CATEGORIES</li>

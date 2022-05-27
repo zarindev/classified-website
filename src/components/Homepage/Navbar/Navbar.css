@@ -10,6 +10,16 @@
     list-style: none;
     font-family: 'Roboto', sans-serif;
 }
+.side-nav{
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    float: right;
+}
+.side-nav li{
+    padding: 1rem;
+    border: 0.3px solid rgb(148, 148, 148);
+}
+
 .nav-style{
   position: relative;
   display: inline-block;

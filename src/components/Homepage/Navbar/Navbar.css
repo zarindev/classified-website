@@ -13,11 +13,12 @@
 .side-nav{
     list-style: none;
     font-family: 'Roboto', sans-serif;
-    float: right;
+    margin-left: 100%;
 }
 .side-nav li{
     padding: 1rem;
     border: 0.3px solid rgb(148, 148, 148);
+    cursor: pointer;
 }
 
 .nav-style{
@@ -47,6 +48,11 @@
 .nav-style:hover::after{
     width: 100%;
 }
+.nav__close{
+    border: 1px solid gray !important;
+    padding: 10px 10px !important;
+    width: 10px !important;
+}
 .icon-style{
     background-color: #00AEFF;
     color: #fff;
@@ -61,8 +67,8 @@
     font-size: 16px !important;
     color: #000 !important;
 }
-.category-btn{
-    
+.show-nav{
+    margin-left: 0;
 }
 .menu-btns{
     display: flex;

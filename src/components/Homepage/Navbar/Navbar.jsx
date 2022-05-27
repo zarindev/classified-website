@@ -4,9 +4,32 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import LineWeightIcon from '@material-ui/icons/LineWeight';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 
 import "./Navbar.css";
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
+
+/*Menu Show*/
+/* Validate if constant exists */
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-nav");
+    console.log('clicked');
+  });
+}
+
+/*Menu Hidden*/
+/* Validate if constant exists */
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-nav");
+    console.log('clicked');
+  });
+}
+
 
 const options = [
   "None",
@@ -77,6 +100,7 @@ const Navbar = () => {
       </div>
       <div className=" topnav" id="myTopnav">
         <ul className="nav-menus menu-btns">
+          
           <li className="nav-style">HOME</li>
           <li className="nav-style">ABOUT US</li>
           <li className="nav-style">ALL CATEGORIES</li>
@@ -84,12 +108,13 @@ const Navbar = () => {
           <li className="nav-style">PAGES</li>
           <li className="nav-style">CONTACT US</li>
         </ul>
-        <div className="mobile-menu-btn"><LineWeightIcon /></div>
+        <div className="mobile-menu-btn nav__toggle" id="nav-toggle"><LineWeightIcon /></div>
         
       </div>
       
     </div>
-    <ul className=" side-nav ">
+    <ul className=" side-nav  " id="nav-menu">
+          <li className="nav__close" id="nav-close"><ArrowForwardIosIcon/></li>
           <li className="">HOME</li>
           <li className="">ABOUT US</li>
           <li className="">ALL CATEGORIES</li>
